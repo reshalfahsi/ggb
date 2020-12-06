@@ -16,8 +16,8 @@ $ python ggb.py --input <directory-to-your-image>
 ### Leukocytes
 ![alt text](img/GGB_RGB_LEUKOCYTES.jpg)
 
-### Chicken
-![alt text](img/GGB_RGB_CHICKEN.jpg)
+### Fundus
+![alt text](img/GGB_RGB_FUNDUS.jpg)
 
 ### Car
 ![alt text](img/GGB_RGB_TESLA.jpg)
