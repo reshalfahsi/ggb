@@ -9,6 +9,7 @@ import numpy as np
 
 from PIL import Image
 
+
 def main():
     # Load image from internet
     req = urllib.urlopen('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes.png')
