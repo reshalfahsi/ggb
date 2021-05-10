@@ -22,6 +22,7 @@ def main():
     # Result
     img = ggb_image.write()    
     io.imshow(img)
+    io.show()
 
 
 if __name__ == '__main__':
