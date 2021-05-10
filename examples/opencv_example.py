@@ -1,7 +1,11 @@
 from ggb import GGB, ColorSpace
 
 import cv2
-import urllib
+try:
+    import urllib.request as urllib
+except:
+    import urllib
+
 import numpy as np
 
 
@@ -16,7 +20,9 @@ def main():
     ggb_image.show()
 
     # Result
-    img = ggb_img.write()    
+    img = ggb_image.write()
+    cv2.imshow("GGB", img)
+    cv2.waitKey(0)    
 
 
 if __name__ == '__main__':

@@ -1,7 +1,10 @@
 from ggb import GGB, ColorSpace
 
 import cv2
-import urllib
+try:
+    import urllib.request as urllib
+except:
+    import urllib
 import numpy as np
 
 from skimage import io
@@ -17,7 +20,7 @@ def main():
     ggb_image.show()
 
     # Result
-    img = ggb_img.write()    
+    img = ggb_image.write()    
     io.imshow(img)
 
 

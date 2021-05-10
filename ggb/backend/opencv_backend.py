@@ -53,5 +53,5 @@ def postprocessing(b, g, **kwargs):
     inverse = False
     if 'inverse' in kwargs:
         inverse = kwargs['inverse']
-    ggb = cv2.merge((b,g,g)) if not inverse else: cv2.merge((g,g,b))
+    img = cv2.merge((b,g,g)) if not inverse else cv2.merge((g,g,b))
     return img

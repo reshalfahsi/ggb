@@ -1,6 +1,7 @@
 from ggb.utils.constant import ColorSpace, CVLib
 from ggb.utils.error import ColorSpaceError
 
+import numpy as np
 
 class GGBImage(object):
     """Image handler for GGB.
@@ -28,24 +29,19 @@ class GGBImage(object):
         :param backend: computer vision library which handle the task
         :return: image variable
         """
-        assert(image != None, "Please load the image first!")
         if isinstance(source, str):
             if backend == CVLib.OPENCV:
-                from ggb.backend.opencv_backend import *
                 self.__backend = CVLib.OPENCV
                 import cv2
                 return cv2.imread(path)
             else:
-                from ggb.backend.pil_backend import *
                 self.__backend = CVLib.PIL
                 from PIL import Image
                 return Image.open(path).convert('RGB')
         else:
             if isinstance(source, np.ndarray):
-                from ggb.backend.opencv_backend import *
                 self.__backend = CVLib.OPENCV
             else:
-                from ggb.backend.pil_backend import *
                 self.__backend = CVLib.PIL
             return source
 
@@ -61,6 +57,7 @@ class GGBImage(object):
         else:
             if self.__backend == CVLib.OPENCV:
                 import cv2
+                self.__image = self.__image.astype('uint8')
                 cv2.imwrite(path, self.__image)
             else:
                 self.__image.save(path)
@@ -69,8 +66,9 @@ class GGBImage(object):
     def show(self):
         """Show the image.
         """
-        assert(self.__image != None, "Please load the image first!")
         if self.__backend == CVLib.OPENCV:
+            import cv2
+            self.__image = self.__image.astype('uint8')
             cv2.imshow("GGB", self.__image)
             cv2.waitKey(0)
         else:

@@ -8,7 +8,7 @@ from PIL.ImageStat import Stat
 from ggb.utils.constant import ColorSpace
 
 
-def preprocessing(img, input_color=ColorSpace.RGB):
+def preprocessing(image, input_color=ColorSpace.RGB):
     """Preprocess source image. 
     
     :param image: source image
