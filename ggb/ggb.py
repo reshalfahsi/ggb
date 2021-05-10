@@ -37,6 +37,6 @@ class GGB(GGBImage):
                                 'passed to GGB: ' + str(k))
         img = preprocessing(self.write(), self.__img_color_space)
         b, g = split_normalize(img)
-        img = postprocessing(b, g, *args, **kwargs)
+        img = postprocessing(b, g, **kwargs)
 
         return GGBImage(img, self.backend())
