@@ -17,7 +17,7 @@ def main():
     
     # Converting to GGB Color
     ggb_image = GGB(image=img, input_color=ColorSpace.BGR).process(inverse=True)
-    ggb_image.show(inverse=True)
+    ggb_image.show()
 
     # Result
     img = ggb_image.write()    

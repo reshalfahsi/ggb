@@ -9,7 +9,7 @@ def preprocessing(image, input_color=ColorSpace.RGB):
     
     :param image: source image
     :param input_color: source image color space
-    :return:
+    :return: preprocessed image
     """
     img = image
     if input_color == ColorSpace.BGR:

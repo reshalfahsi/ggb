@@ -8,14 +8,21 @@ class GGBImage(object):
     
     :param image: image source either from path or variable
     :param backend: computer vision library which handle the task
+    :param kwargs: dict of custom variable
     """
-    def __init__(self, image=None, backend=CVLib.OPENCV):
+    def __init__(self, image=None, backend=CVLib.OPENCV, **kwargs):
+        allowed_kwargs = {'inverse'}
+        for k in kwargs:
+            if k not in allowed_kwargs:
+                raise TypeError('Unexpected keyword argument '
+                                'passed to GGBImage: ' + str(k))
+        self.__inverse = True if 'inverse' in kwargs else False
         self.__backend = backend
         self.__image = self.__read(image, backend)
 
 
     def backend(self):
-        """Check which computer vision library is used as backend
+        """Check which computer vision library is used as backend.
         
         :return: type of computer vision library
         """
@@ -47,8 +54,7 @@ class GGBImage(object):
 
 
     def write(self, path=None, **kwargs):
-        """Write the image into a file when path is not None 
-           or variable when path is None.
+        """Write the image into a file when path is not None or variable when path is None.
          
         :param path: path to file
         :param kwargs: dict of custom variable
@@ -74,21 +80,13 @@ class GGBImage(object):
                 self.__image.save(path)
 
 
-    def show(self, **kwargs):
+    def show(self):
         """Show the image.
-
-        :param kwargs: dict of custom variable
         """
-        allowed_kwargs = {'inverse'}
-        for k in kwargs:
-            if k not in allowed_kwargs:
-                raise TypeError('Unexpected keyword argument '
-                                'passed to GGBImage: ' + str(k))
         if self.__backend == CVLib.OPENCV:
             import cv2
             image = self.__image.astype('uint8')
-            if 'inverse' in kwargs:
-                image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR) if kwargs['inverse'] else image
+            image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR) if self.__inverse else image
             cv2.imshow("GGB", image)
             cv2.waitKey(0)
         else:

@@ -5,9 +5,25 @@ This package is implementation of GGB color space from [Development of a Robust 
 
 ## Installation
 
+### Install GGB
+
 This package could be installed via [PyPI](https://pypi.org/project/ggb/).
 
     pip3 install ggb
+
+
+### Building the Documentation
+
+The documentations to this package could be built using [Sphinx](www.sphinx-doc.org).
+
+```bash
+cd docs/
+pip3 install -r requirements.txt
+sphinx-apidoc -f -o source ../ggb
+make html
+```
+
+The HTML pages are in docs/build/html.
 
 
 ## Quick Demo

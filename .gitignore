@@ -10,6 +10,7 @@ dist
 .tox
 .coverage
 html/*
+doctrees/*
 __pycache__
 
 # Compiled Documentation

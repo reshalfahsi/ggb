@@ -28,6 +28,7 @@ class GGB(GGBImage):
         """Main process of GGB.
         
         :param kwargs: dict of custom variable
+        :return: GGBImage instance
         """
         allowed_kwargs = {'inverse'}
         for k in kwargs:
@@ -42,4 +43,4 @@ class GGB(GGBImage):
         b, g = split_normalize(img)
         img = postprocessing(b, g, **kwargs)
 
-        return GGBImage(img, self.backend())
+        return GGBImage(img, self.backend(), **kwargs)
