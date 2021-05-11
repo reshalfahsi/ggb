@@ -1,4 +1,7 @@
 *.pyc
+build/*
+dist/*
+*.egg-info
 
 # developer environments
 .vscode
