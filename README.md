@@ -51,3 +51,8 @@ img = ggb_image.write()
 
 ### Car
 ![alt text](https://github.com/reshalfahsi/GGB/raw/master/docs/img/GGB_RGB_TESLA.jpg)
+
+
+## License
+
+[MIT License](https://github.com/reshalfahsi/ggb/blob/master/LICENSE)
