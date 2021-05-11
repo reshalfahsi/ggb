@@ -11,7 +11,7 @@ class GGBImage(object):
     """
     def __init__(self, image=None, backend=CVLib.OPENCV):
         self.__backend = backend
-        self.__image = self.read(image, backend)
+        self.__image = self.__read(image, backend)
 
 
     def backend(self):
@@ -22,7 +22,7 @@ class GGBImage(object):
         return self.__backend
 
 
-    def read(self, source, backend=CVLib.OPENCV):
+    def __read(self, source, backend=CVLib.OPENCV):
         """Read image from source.
     
         :param source: image source either from path or variable
