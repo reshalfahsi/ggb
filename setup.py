@@ -11,7 +11,7 @@ HERE = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(HERE, "README.md")) as fid:
     README = fid.read()
 
-setup(name='GGB Color Space',
+setup(name='ggb',
       version='1.1.0',
       description='GGB Color Space in Python',
       long_description=README,

@@ -5,7 +5,7 @@ This package is implementation of GGB color space from [Development of a Robust 
 
 ## Installation
 
-This package could be installed via [PyPI](https://pypi.org/project/ggb/)
+This package could be installed via [PyPI](https://pypi.org/project/ggb/).
 
     pip3 install ggb
 
