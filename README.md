@@ -15,6 +15,21 @@ This package could be installed via [PyPI](https://pypi.org/project/ggb/).
     pip3 install ggb
 
 
+### Building Docker Image
+
+`Dockerfile` is also provided in this project. To build the image:
+
+```bash
+cd docker/
+bash docker.build.sh
+```
+
+
+or pull it directly from Docker Hub:
+
+    docker pull reshalfahsi/ggb:1.1.0
+
+
 ### Building the Documentation
 
 The documentations to this package could be built using [Sphinx](www.sphinx-doc.org).
