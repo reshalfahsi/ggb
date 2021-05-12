@@ -1,5 +1,8 @@
 # GGB Color Space
 
+[![PyPI](https://badge.fury.io/py/tensorflow.svg)](https://badge.fury.io/py/ggb)
+
+
 This package is implementation of GGB color space from [Development of a Robust Algorithm for Detection of Nuclei and Classification of White Blood Cells in Peripheral Blood Smear Image](https://link.springer.com/content/pdf/10.1007%2Fs10916-018-0962-1.pdf).
 
 
