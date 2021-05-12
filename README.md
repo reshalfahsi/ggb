@@ -25,7 +25,7 @@ bash docker.build.sh
 ```
 
 
-or pull it directly from Docker Hub:
+or pull it directly from [Docker Hub](https://hub.docker.com/repository/docker/reshalfahsi/ggb):
 
     docker pull reshalfahsi/ggb:1.1.0
 
