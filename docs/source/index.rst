@@ -10,7 +10,7 @@ Welcome to GGB Color Space's documentation!
    :maxdepth: 2
    :caption: Contents:
    
-   modules
+   modules.rst
 
 
 
