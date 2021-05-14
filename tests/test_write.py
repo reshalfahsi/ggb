@@ -4,7 +4,7 @@ import numpy as np
 import random
 import pytest
 
-from ggb import GGB, GGBImage
+from ggb import GGB, GGBImage, CVLib
 from ggb.utils.test import ggb_test
 from ggb.utils.test import get_random_image, get_filled_image
 

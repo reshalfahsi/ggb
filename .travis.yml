@@ -7,10 +7,6 @@ matrix:
           env: TEST_MODE=PEP8
         - python: 3.6
         - python: 3.7
-          env: TEST_MODE=PEP8
-        - python: 3.7
-        - python: 3.8
-          env: TEST_MODE=PEP8
         - python: 3.8
 install:
   - pip install numpy Pillow six
@@ -22,7 +18,7 @@ install:
 script:
   - echo -e "Running tests..."
   - if [[ "$TEST_MODE" == "PEP8" ]]; then
-       PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8 -m pep8 -n0;
+       PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8;
     else
        PYTHONPATH=$PWD:$PYTHONPATH py.test tests/;
     fi
