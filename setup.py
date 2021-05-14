@@ -51,4 +51,4 @@ setup(name='ggb',
       },
       packages=find_packages(),
       entry_points={"console_scripts": ["reshalfahsi=ggb.__main__:main"]},
-)
+      )
