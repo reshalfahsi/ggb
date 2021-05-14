@@ -1,8 +1,8 @@
 """
 
-This package is implementation of GGB color space from 
+This package is implementation of GGB color space from
 Development of a Robust Algorithm for Detection of Nuclei and Classification of White Blood Cells in Peripheral Blood Smear Images.
- 
+
 https://link.springer.com/content/pdf/10.1007%2Fs10916-018-0962-1.pdf
 
 

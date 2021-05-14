@@ -3,9 +3,10 @@ from ggb.utils.error import ColorSpaceError
 
 import numpy as np
 
+
 class GGBImage(object):
     """Image handler for GGB.
-    
+
     :param image: image source either from path or variable
     :param backend: computer vision library which handle the task
     :param kwargs: dict of custom variable
@@ -20,18 +21,16 @@ class GGBImage(object):
         self.__backend = backend
         self.__image = self.__read(image, backend)
 
-
     def backend(self):
         """Check which computer vision library is used as backend.
-        
+
         :return: type of computer vision library
         """
         return self.__backend
 
-
     def __read(self, source, backend=CVLib.OPENCV):
         """Read image from source.
-    
+
         :param source: image source either from path or variable
         :param backend: computer vision library which handle the task
         :return: image variable
@@ -52,10 +51,9 @@ class GGBImage(object):
                 self.__backend = CVLib.PIL
             return source
 
-
     def write(self, path=None, **kwargs):
         """Write the image into a file when path is not None or variable when path is None.
-         
+
         :param path: path to file
         :param kwargs: dict of custom variable
         """
@@ -64,7 +62,7 @@ class GGBImage(object):
             if k not in allowed_kwargs:
                 raise TypeError('Unexpected keyword argument '
                                 'passed to GGBImage: ' + str(k))
-        if path == None:
+        if path is None:
             if self.__backend == CVLib.OPENCV:
                 image = self.__image.astype('uint8')
                 return image
@@ -78,7 +76,6 @@ class GGBImage(object):
                 cv2.imwrite(path, image)
             else:
                 self.__image.save(path)
-
 
     def show(self):
         """Show the image.

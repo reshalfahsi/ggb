@@ -1,23 +1,17 @@
 sudo: required
-dist: trusty
+dist: bionic
 language: python
 matrix:
     include:
-        - python: 3
-          env: TEST_MODE=PEP8
-        - python: 3
         - python: 3.6
           env: TEST_MODE=PEP8
         - python: 3.6
         - python: 3.7
           env: TEST_MODE=PEP8
         - python: 3.7
-        - python: 3.9
+        - python: 3.8
           env: TEST_MODE=PEP8
         - python: 3.8
-        - python: 3.9
-          env: TEST_MODE=PEP8
-        - python: 3.9
 install:
   - pip install numpy Pillow six
   - pip install --upgrade pip

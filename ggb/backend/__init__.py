@@ -1,6 +1,5 @@
 """
 
-Computer vision library backend for converting to GGB Image. 
-
+Computer vision library backend for converting to GGB Image.
 
 """

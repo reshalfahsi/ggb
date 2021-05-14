@@ -3,8 +3,8 @@ from __future__ import absolute_import
 
 class ColorSpaceError(Exception):
     """Exception raised for errors in the color space.
-    
-    
+
+
     :param color_space: color space which caused the error
     :param message: explanation of the error
     """

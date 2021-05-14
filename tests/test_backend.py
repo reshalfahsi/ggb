@@ -26,7 +26,6 @@ def test_opencv_backend():
     assert(ggb_image.backend() == CVLib.OPENCV)
 
 
-
 @ggb_test
 def test_pil_backend():
     w = random.randint(16, 2048)

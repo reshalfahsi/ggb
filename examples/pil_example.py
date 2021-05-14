@@ -15,7 +15,6 @@ def main():
     req = urllib.urlopen('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes.png')
     arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
     img = cv2.imdecode(arr, -1)
-    
     # Converting to GGB Color
     img = Image.fromarray(img)
     ggb_image = GGB(image=img, input_color=ColorSpace.BGR).process()
@@ -23,7 +22,7 @@ def main():
 
     # Result
     img = ggb_image.write()
-    img.show()    
+    img.show()
 
 
 if __name__ == '__main__':

@@ -10,9 +10,9 @@ import numpy as np
 
 class GGB(GGBImage):
     """GGB color space converter.
-    
+
     :param image: image source either from path or variable
-    :param input_color: color space of source image 
+    :param input_color: color space of source image
     :param backend: computer vision library which handle the task
     """
     def __init__(self, image=None, input_color=ColorSpace.RGB, backend=CVLib.OPENCV):
@@ -23,10 +23,9 @@ class GGB(GGBImage):
         except:
             raise ColorSpaceError(input_color)
 
-
     def process(self, **kwargs):
         """Main process of GGB.
-        
+
         :param kwargs: dict of custom variable
         :return: GGBImage instance
         """

@@ -5,8 +5,8 @@ from ggb.utils.constant import ColorSpace
 
 
 def preprocessing(image, input_color=ColorSpace.RGB):
-    """Preprocess source image. 
-    
+    """Preprocess source image.
+
     :param image: source image
     :param input_color: source image color space
     :return: preprocessed image
@@ -23,7 +23,7 @@ def preprocessing(image, input_color=ColorSpace.RGB):
 
 def split_normalize(image):
     """Splitting source image then normalize it.
-    
+
     :param image: source image
     :return: blue and green channel
     """
@@ -44,7 +44,7 @@ def split_normalize(image):
 
 def postprocessing(b, g, **kwargs):
     """Final GGB process.
-    
+
     :param b: blue channel
     :param g: green channel
     :param kwargs: dict of custom variable
@@ -53,5 +53,5 @@ def postprocessing(b, g, **kwargs):
     inverse = False
     if 'inverse' in kwargs:
         inverse = kwargs['inverse']
-    img = cv2.merge((b,g,g)) if not inverse else cv2.merge((g,g,b))
+    img = cv2.merge((b, g, g)) if not inverse else cv2.merge((g, g, b))
     return img

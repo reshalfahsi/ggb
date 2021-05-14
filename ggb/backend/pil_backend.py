@@ -10,7 +10,7 @@ from ggb.utils.constant import ColorSpace
 
 def preprocessing(image, input_color=ColorSpace.RGB):
     """Preprocess source image. 
-    
+
     :param image: source image
     :param input_color: source image color space
     :return: preprocessed image
@@ -33,15 +33,15 @@ def preprocessing(image, input_color=ColorSpace.RGB):
 
 def split_normalize(image):
     """Splitting source image then normalize it.
-    
+
     :param image: source image
     :return: blue and green channel
     """
     im = Image.Image.split(image)
-    g = ImageOps.equalize(im[1], mask = None)
+    g = ImageOps.equalize(im[1], mask=None)
     mean = Stat(im[2]).mean[0]
     b = np.array(im[2]).astype('float32')
-    b /= (1.0 + mean) 
+    b /= (1.0 + mean)
     mean = Stat(g).mean[0]
     g = np.array(g).astype('float32')
     g /= (1.0 + mean)
@@ -56,7 +56,7 @@ def split_normalize(image):
 
 def postprocessing(b, g, **kwargs):
     """Final GGB process.
-    
+
     :param b: blue channel
     :param g: green channel
     :param kwargs: dict of custom variable
