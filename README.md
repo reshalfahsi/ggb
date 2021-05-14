@@ -1,6 +1,8 @@
 # GGB Color Space
 
 [![PyPI](https://badge.fury.io/py/ggb.svg)](https://badge.fury.io/py/ggb)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/reshalfahsi/ggb/blob/master/LICENSE)
+
 
 
 This package is implementation of GGB color space from [Development of a Robust Algorithm for Detection of Nuclei and Classification of White Blood Cells in Peripheral Blood Smear Image](https://link.springer.com/content/pdf/10.1007%2Fs10916-018-0962-1.pdf).
@@ -14,6 +16,10 @@ This package could be installed via [PyPI](https://pypi.org/project/ggb/).
 
     pip3 install ggb
 
+or manually:
+
+    python3 setup.py install
+
 
 ### Building Docker Image
 
@@ -25,9 +31,9 @@ bash docker.build.sh
 ```
 
 
-or pull it directly from [Docker Hub](https://hub.docker.com/repository/docker/reshalfahsi/ggb):
+or pull it directly from [Docker Hub](https://hub.docker.com/r/reshalfahsi/ggb):
 
-    docker pull reshalfahsi/ggb:1.1.0
+    docker pull reshalfahsi/ggb
 
 
 ### Building the Documentation
@@ -85,8 +91,3 @@ img = ggb_image.write()
 
 ### Car
 ![alt text](https://github.com/reshalfahsi/GGB/raw/master/docs/img/GGB_RGB_TESLA.jpg)
-
-
-## License
-
-[MIT License](https://github.com/reshalfahsi/ggb/blob/master/LICENSE)

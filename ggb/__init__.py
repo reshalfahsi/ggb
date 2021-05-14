@@ -14,4 +14,4 @@ from ggb.ggb import GGB
 from ggb.utils.constant import ColorSpace, CVLib
 from ggb.utils.image import GGBImage
 
-__version__ = '1.1.0'
+__version__ = '1.1.1'

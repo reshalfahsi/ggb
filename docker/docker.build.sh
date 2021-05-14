@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build . -t "reshalfahsi/ggb:1.1.0"
+VERSION='1.1.1'
+docker build . -t "reshalfahsi/ggb:$VERSION"
