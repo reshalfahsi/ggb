@@ -28,6 +28,14 @@ ggb.utils.image module
    :undoc-members:
    :show-inheritance:
 
+ggb.utils.test module
+---------------------
+
+.. automodule:: ggb.utils.test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
