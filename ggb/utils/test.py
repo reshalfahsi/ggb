@@ -25,8 +25,9 @@ def get_filled_image(w, h, c=3, value=0, backend=CVLib.OPENCV):
     :param w: image width
     :param h: image height
     :param c: image channel
+    :param value: same pixel value
     :param backend: computer vision library image output format
-    :return: random image
+    :return: filled image
     """
     image = np.full((w,h,c), value, dtype=np.uint8)
     if backend == CVLib.PIL: image = Image.fromarray(image)

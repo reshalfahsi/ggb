@@ -1,0 +1,25 @@
+sudo: required
+dist: trusty
+language: python
+matrix:
+    include:
+        - python: 2.7
+          env: TEST_MODE=PEP8
+        - python: 2.7
+        - python: 3.5
+install:
+  - pip install numpy Pillow six
+  - pip install --upgrade pip
+  - pip install opencv-python
+  - pip install -e .[tests]
+
+# command to run tests
+script:
+  - echo -e "Running tests..."
+  - if [[ "$TEST_MODE" == "PEP8" ]]; then
+       PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8 -m pep8 -n0;
+    else
+       PYTHONPATH=$PWD:$PYTHONPATH py.test tests/;
+    fi
+after_success:
+  - coveralls
