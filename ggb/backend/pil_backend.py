@@ -9,7 +9,7 @@ from ggb.utils.constant import ColorSpace
 
 
 def preprocessing(image, input_color=ColorSpace.RGB):
-    """Preprocess source image. 
+    """Preprocess source image.
 
     :param image: source image
     :param input_color: source image color space

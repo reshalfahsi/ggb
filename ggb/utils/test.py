@@ -16,7 +16,8 @@ def get_random_image(w, h, c=3, backend=CVLib.OPENCV):
     :return: random image
     """
     image = np.random.randint(255, size=(w, h, c), dtype=np.uint8)
-    if backend == CVLib.PIL: image = Image.fromarray(image)
+    if backend == CVLib.PIL:
+        image = Image.fromarray(image)
     return image
 
 
@@ -31,7 +32,7 @@ def get_filled_image(w, h, c=3, value=0, backend=CVLib.OPENCV):
     :return: filled image
     """
     image = np.full((w, h, c), value, dtype=np.uint8)
-    if backend == CVLib.PIL: 
+    if backend == CVLib.PIL:
         image = Image.fromarray(image)
     return image
 
