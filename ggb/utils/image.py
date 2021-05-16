@@ -11,7 +11,7 @@ class GGBImage(object):
     :param backend: computer vision library which handle the task
     :param kwargs: dict of custom variable
     """
-    def __init__(self, image=None, backend=CVLib.OPENCV, **kwargs):
+    def __init__(self, image=None, input_color=ColorSpace.RGB, backend=CVLib.OPENCV, **kwargs):
         allowed_kwargs = {'inverse'}
         for k in kwargs:
             if k not in allowed_kwargs:

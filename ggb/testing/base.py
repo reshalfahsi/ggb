@@ -64,8 +64,8 @@ def get_image_from_url(url, backend=CVLib.OPENCV):
     img = cv2.imdecode(arr, -1)
     if backend == CVLib.PIL:
         try:
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-            image = Image.fromarray(image).convert('RGB')
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            img = Image.fromarray(img).convert('RGB')
         except:
             raise ComputerVisionLibraryError
     return img

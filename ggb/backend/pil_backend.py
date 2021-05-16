@@ -24,7 +24,7 @@ def preprocessing(image, input_color=ColorSpace.RGB):
         img = np.array(img)
         img = cv2.cvtColor(img, cv2.COLOR_HSV2RGB)
         img = Image.fromarray(img)
-    else:
+    elif input_color == ColorSpace.YUV:
         img = np.array(img)
         img = cv2.cvtColor(img, cv2.COLOR_YUV2RGB)
         img = Image.fromarray(img)

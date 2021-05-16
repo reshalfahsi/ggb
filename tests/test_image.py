@@ -66,14 +66,17 @@ def test_color_space():
     ggb_image = GGB(image=image, input_color=ColorSpace.BGR, backend=CVLib.OPENCV).process()
     np.testing.assert_array_equal(ggb_image.write(), reference_image)
 
+    reference_image = get_image_from_url('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes_rgb_ggb.png')
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     ggb_image = GGB(image=rgb_image, input_color=ColorSpace.RGB, backend=CVLib.OPENCV).process()
     np.testing.assert_array_equal(ggb_image.write(), reference_image)
 
+    reference_image = get_image_from_url('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes_hsv_ggb.png')
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     ggb_image = GGB(image=hsv_image, input_color=ColorSpace.HSV, backend=CVLib.OPENCV).process()
     np.testing.assert_array_equal(ggb_image.write(), reference_image)
 
+    reference_image = get_image_from_url('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes_yuv_ggb.png')
     yuv_image = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
     ggb_image = GGB(image=yuv_image, input_color=ColorSpace.YUV, backend=CVLib.OPENCV).process()
     np.testing.assert_array_equal(ggb_image.write(), reference_image)

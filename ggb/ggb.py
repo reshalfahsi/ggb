@@ -17,15 +17,15 @@ class GGB(GGBImage):
     """
     def __init__(self, image=None, input_color=ColorSpace.RGB, backend=CVLib.OPENCV):
         try:
-            assert(isinstance(backend, CVLib))
-            super(GGB, self).__init__(image, backend)
-        except:
-            raise ComputerVisionLibraryError(backend)
-        try:
             assert(isinstance(input_color, ColorSpace))
             self.__img_color_space = input_color
         except:
             raise ColorSpaceError(input_color)
+        try:
+            assert(isinstance(backend, CVLib))
+            super(GGB, self).__init__(image, backend)
+        except:
+            raise ComputerVisionLibraryError(backend)
 
     def process(self, **kwargs):
         """Main process of GGB.
@@ -39,4 +39,4 @@ class GGB(GGBImage):
                 raise TypeError('Unexpected keyword argument '
                                 'passed to GGB: ' + str(k))
         img = B.process(self.write(), self.__img_color_space, self.backend(), **kwargs)
-        return GGBImage(img, self.backend(), **kwargs)
+        return GGBImage(img, self.__img_color_space, self.backend(), **kwargs)

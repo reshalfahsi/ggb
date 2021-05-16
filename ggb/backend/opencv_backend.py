@@ -16,7 +16,7 @@ def preprocessing(image, input_color=ColorSpace.RGB):
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     elif input_color == ColorSpace.HSV:
         img = cv2.cvtColor(img, cv2.COLOR_HSV2RGB)
-    else:
+    elif input_color == ColorSpace.YUV:
         img = cv2.cvtColor(img, cv2.COLOR_YUV2RGB)
     return img
 
