@@ -20,7 +20,7 @@ This package is implementation of GGB color space from [Development of a Robust 
    :alt: Docker
 
 .. image:: https://codecov.io/github/reshalfahsi/ggb/coverage.svg?branch=master&precision=2
-   :target: https://codecov.io/github/reshalfahsis/ggb?branch=master
+   :target: https://codecov.io/gh/reshalfahsi/ggb
    :alt: Codecov
 
 Overview
