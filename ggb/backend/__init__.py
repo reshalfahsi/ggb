@@ -6,6 +6,7 @@ Computer vision library backend for converting to GGB Image.
 
 from ggb.utils import CVLib
 
+
 def process(image, color_space, backend, **kwargs):
     """The main proces of GGB converter.
 
