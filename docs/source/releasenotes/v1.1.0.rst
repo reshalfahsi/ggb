@@ -1,0 +1,5 @@
+v1.1.0
+======
+
+- Support OpenCV, PIL (Pillow), and scikit-image (skimage) format.
+- First public release version.

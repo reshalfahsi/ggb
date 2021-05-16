@@ -11,7 +11,8 @@ https://link.springer.com/content/pdf/10.1007%2Fs10916-018-0962-1.pdf
 from __future__ import absolute_import
 
 from ggb.ggb import GGB
-from ggb.utils.constant import ColorSpace, CVLib
-from ggb.utils.image import GGBImage
+from ggb.utils import ColorSpace, CVLib
+import ggb.testing as testing
+import ggb.backend as backend
 
-__version__ = '1.1.1'
+__version__ = '1.1.2'

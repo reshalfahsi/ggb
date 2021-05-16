@@ -1,0 +1,11 @@
+v1.1.2
+======
+
+- ``GGBImage`` can not be called directly from ``ggb`` module.
+- Add ``ggb.testing`` module.
+- Move ``ggb.utils.test`` module to ``ggb.testing.base`` module.
+- Add ``get_image_from_url`` function in the ``ggb.testing.base`` module.
+- Add ``process`` method in the ``ggb.backend`` module.
+- Rewrite ``ggb.ggb`` module.
+- Add ``ComputerVisionLibraryError`` exception in the ``ggb.utils.error`` module.
+- Tidying up code for documentation.
