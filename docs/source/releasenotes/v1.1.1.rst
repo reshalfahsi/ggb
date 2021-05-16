@@ -1,0 +1,6 @@
+v1.1.1
+======
+
+- Add testing utilities
+- Simplify syntax for ``scikit-image``
+- Tidying up code in accordance with PEP8

@@ -4,9 +4,9 @@ from enum import Enum
 class ColorSpace(Enum):
     """Valid color spaces.
     """
-    RGB = 1
-    BGR = 2
-    HSV = 3
+    BGR = 1
+    HSV = 2
+    RGB = 3
     YUV = 4
 
 

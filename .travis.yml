@@ -13,6 +13,7 @@ matrix:
         - python: 3.7
           dist: bionic
 install:
+  - pip install codecov
   - pip install numpy Pillow six
   - pip install --upgrade pip
   - pip install opencv-python
@@ -26,5 +27,6 @@ script:
     else
        PYTHONPATH=$PWD:$PYTHONPATH py.test tests/;
     fi
+  - coverage run -m pytest
 after_success:
   - coveralls

@@ -12,7 +12,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
     README = fid.read()
 
 setup(name='ggb',
-      version='1.1.1',
+      version='1.1.2',
       description='GGB Color Space in Python',
       long_description=README,
       long_description_content_type="text/markdown",
