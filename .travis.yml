@@ -25,7 +25,7 @@ script:
     else
        PYTHONPATH=$PWD:$PYTHONPATH py.test tests/;
        coverage run -m pytest;
-       codecov
+       codecov;
     fi
 after_success:
   - echo -e "Testing finished..."
