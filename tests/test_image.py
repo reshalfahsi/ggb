@@ -30,7 +30,7 @@ def test_opencv_channel():
     w = random.randint(16, 2048)
     h = random.randint(16, 2048)
     c = random.randint(1, 16)
-    c = random.randint(8, 16) if ((c == 3) or (c==4)) else c
+    c = random.randint(8, 16) if ((c == 3) or (c == 4)) else c
     image = get_random_image(w, h, c, CVLib.OPENCV)
     flag = None
 
@@ -47,7 +47,7 @@ def test_pil_channel():
     w = random.randint(16, 2048)
     h = random.randint(16, 2048)
     c = random.randint(1, 16)
-    c = random.randint(8, 16) if ((c == 3) or (c==4)) else c
+    c = random.randint(8, 16) if ((c == 3) or (c == 4)) else c
     flag = None
 
     try:
