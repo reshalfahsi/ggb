@@ -8,8 +8,6 @@ matrix:
         - python: 3.6
           env: TEST_MODE=PEP8
           dist: trusty
-        - python: 3.6
-          dist: bionic
         - python: 3.7
           dist: bionic
 install:
@@ -27,6 +25,7 @@ script:
     else
        PYTHONPATH=$PWD:$PYTHONPATH py.test tests/;
        coverage run -m pytest;
+       codecov
     fi
 after_success:
-  - codecov
+  - echo -e "Testing finished..."

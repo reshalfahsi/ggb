@@ -39,4 +39,4 @@ class GGB(GGBImage):
                 raise TypeError('Unexpected keyword argument '
                                 'passed to GGB: ' + str(k))
         img = B.process(self.write(), self.__img_color_space, self.backend(), **kwargs)
-        return GGBImage(img, self.__img_color_space, self.backend(), **kwargs)
+        return GGBImage(img, self.backend(), **kwargs)

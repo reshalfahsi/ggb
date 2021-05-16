@@ -1,9 +1,9 @@
 # GGB Color Space
 
 [![PyPI](https://badge.fury.io/py/ggb.svg)](https://badge.fury.io/py/ggb)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/reshalfahsi/ggb/blob/master/LICENSE)
+[![license](https://img.shields.io/pypi/l/ggb.svg)](https://github.com/reshalfahsi/ggb/blob/master/LICENSE)
 [![Travis CI](https://api.travis-ci.com/reshalfahsi/ggb.svg?branch=master)](https://travis-ci.com/github/reshalfahsi/ggb)
-[![docker](https://img.shields.io/docker/pulls/reshalfahsi/ggb.svg)](https://hub.docker.com/r/reshalfahsi/ggb)
+[![docker](https://img.shields.io/docker/pulls/reshalfahsi/ggb)](https://hub.docker.com/r/reshalfahsi/ggb)
 [![codecov](https://codecov.io/github/reshalfahsi/ggb/coverage.svg?branch=master&precision=2)](https://codecov.io/gh/reshalfahsi/ggb)
 
 

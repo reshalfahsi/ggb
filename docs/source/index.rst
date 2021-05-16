@@ -7,7 +7,7 @@ This package is implementation of GGB color space from [Development of a Robust 
    :target: https://badge.fury.io/py/ggb
    :alt: PyPI
 
-.. image:: https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000
+.. image:: https://img.shields.io/pypi/l/ggb.svg
    :target: https://github.com/reshalfahsi/ggb/blob/master/LICENSE
    :alt: license
 
@@ -15,7 +15,7 @@ This package is implementation of GGB color space from [Development of a Robust 
    :target: https://travis-ci.com/github/reshalfahsi/ggb
    :alt: TravisCI
 
-.. image:: https://img.shields.io/docker/pulls/reshalfahsi/ggb.svg
+.. image:: https://img.shields.io/docker/pulls/reshalfahsi/ggb
    :target: https://hub.docker.com/r/reshalfahsi/ggb
    :alt: Docker
 
