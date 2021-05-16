@@ -2,7 +2,6 @@ import pytest
 import cv2
 import random
 import numpy as np
-from PIL import ImageChops
 
 from ggb import GGB, CVLib, ColorSpace
 from ggb.testing import ggb_test
@@ -22,7 +21,7 @@ def test_pil_difference():
     reference_image = get_image_from_url('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes_ggb_pil.png', CVLib.PIL)
     image = get_image_from_url('https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes.png', CVLib.PIL)
     ggb_image = GGB(image=image, input_color=ColorSpace.RGB).process()
-    assert(not ImageChops.difference(ggb_image.write(), reference_image))
+    np.testing.assert_array_equal(np.array(ggb_image.write()), np.array(reference_image))
 
 
 @ggb_test
