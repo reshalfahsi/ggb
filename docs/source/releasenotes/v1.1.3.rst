@@ -1,0 +1,6 @@
+v1.1.3
+======
+
+- Resolve error in reading YUV color space.
+- Improve compatibility ``skimage`` format for ``GGBImage``. 
+- Add some documentation and testing utilities.
