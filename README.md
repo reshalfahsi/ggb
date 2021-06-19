@@ -53,7 +53,7 @@ The HTML pages are in docs/build/html.
 
 ## Quick Demo
 
-This package supports various computer vision libraries such as OpenCV and PIL. Complete example for these computer vision libraries provided in [here](https://github.com/reshalfahsi/ggb/tree/master/examples). For the short example in Python3:
+This package supports various computer vision libraries such as OpenCV and PIL. Complete examples for these computer vision libraries are provided in [here](https://github.com/reshalfahsi/ggb/tree/master/examples). For the short example in Python3:
 
 
 ```python
