@@ -10,7 +10,6 @@ matrix:
           dist: trusty
         - python: 3.7
           dist: bionic
-          env: INPUT_IMAGE=https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes.png
 install:
   - pip install --upgrade pip
   - pip install -e .[tests]
@@ -21,8 +20,8 @@ script:
   - if [[ "$TEST_MODE" == "PEP8" ]]; then
        PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8 -m pep8 -n0;
     else
+       ggb "https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes.png";
        pytest --tb=short -q --cov-report term-missing --cov=. tests/;
-       ggb $INPUT_IMAGE
        coverage xml;
        coverage report -m;
        codecov;
