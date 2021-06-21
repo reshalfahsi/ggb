@@ -12,7 +12,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
     README = fid.read()
 
 setup(name='ggb',
-      version='1.1.3',
+      version='1.1.4',
       description='GGB Color Space in Python',
       long_description=README,
       long_description_content_type="text/markdown",
@@ -40,7 +40,11 @@ setup(name='ggb',
           "Programming Language :: Python :: 3.9",
       ],
       include_package_data=True,
-      install_requires=['numpy', 'Pillow', 'opencv-python', 'six'],
+      install_requires=['numpy', 
+                        'Pillow', 
+                        'opencv-python', 
+                        'six', 
+                        'click'],
       extras_require={
           'tests': ['pytest',
                     'pytest-cov',
@@ -51,5 +55,5 @@ setup(name='ggb',
                     'coverage'],
       },
       packages=find_packages(),
-      entry_points={"console_scripts": ["reshalfahsi=ggb.__main__:main"]},
+      entry_points={"console_scripts": ["ggb=ggb.__main__:main"]},
       )

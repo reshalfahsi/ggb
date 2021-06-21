@@ -18,7 +18,7 @@ class GGB(GGBImage):
     def __init__(self, image=None, input_color=ColorSpace.RGB, backend=CVLib.OPENCV):
         try:
             assert(isinstance(input_color, ColorSpace))
-            self.__img_color_space = input_color
+            self._img_color_space = input_color
         except:
             raise ColorSpaceError(input_color)
         try:
@@ -38,5 +38,5 @@ class GGB(GGBImage):
             if k not in allowed_kwargs:
                 raise TypeError('Unexpected keyword argument '
                                 'passed to GGB: ' + str(k))
-        img = B.process(self.write(), self.__img_color_space, self.backend(), **kwargs)
+        img = B.process(self.write(), self._img_color_space, self.backend(), **kwargs)
         return GGBImage(img, self.backend(), **kwargs)
