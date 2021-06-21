@@ -81,6 +81,10 @@ ggb_image.show()
 img = ggb_image.write()
 ```
 
+This package also could be run through CLI:
+
+    ggb /path/to/image --output /path/to/output
+
 
 ## Result
 
