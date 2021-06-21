@@ -20,6 +20,7 @@ script:
   - if [[ "$TEST_MODE" == "PEP8" ]]; then
        PYTHONPATH=$PWD:$PYTHONPATH py.test --pep8 -m pep8 -n0;
     else
+       ggb "https://github.com/reshalfahsi/GGB/raw/master/docs/img/leukocytes.png";
        pytest --tb=short -q --cov-report term-missing --cov=. tests/;
        coverage xml;
        coverage report -m;

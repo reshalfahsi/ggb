@@ -58,6 +58,7 @@ def main(
 
     ggb_image = GGB(image=img, input_color=ColorSpace.BGR).process()
     ggb_image.write(output)
+    print("The GGB image is written to {}".format(output))
 
 
 if __name__ == "__main__":
