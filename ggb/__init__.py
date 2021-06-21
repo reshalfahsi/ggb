@@ -15,4 +15,4 @@ from ggb.utils import ColorSpace, CVLib
 import ggb.testing as testing
 import ggb.backend as backend
 
-__version__ = '1.1.4'
+__version__ = '1.1.5'

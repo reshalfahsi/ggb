@@ -1,6 +1,7 @@
 import click
 import platform
 import cv2
+import numpy as np
 try:
     import urllib.request as urllib
 except:
